@@ -7,8 +7,10 @@ library(ggthemes)
 library(cowplot)
 library(forecast)
 
+#set working directory
 setwd("G:/YOUR DIrectory/GDP GGPLOTs")
 
+#load data
 df<-read_excel("Table 1.17.1.xls", sheet = "data")
 class(df)
 head(df)
@@ -41,7 +43,7 @@ a<-ggplot(gdpd2, aes(QTR, GDP, fill = growth)) +
   #annotate("segment", x = as.Date("2020-09-01"), xend = as.Date("2020-09-01"), y = 2.05, yend = 2.4,colour = "blue")
 
 
-
+#load data
 df2<-read_excel("GDPContribute.xls", sheet = "data")
 class(df2)
 head(df2)
